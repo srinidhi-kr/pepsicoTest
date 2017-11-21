@@ -1,0 +1,8 @@
+---
+applications:
+- name: order-api-db
+  instances: 1
+  services:
+  - service-registry
+  - dev-mysql
+ # buildpack: java_buildpack

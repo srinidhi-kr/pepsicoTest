@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: order-api-db
+  cloud:
+    services:
+      registrationMethod: direct
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  datasource:
+#    platform: postgres
+    url: jdbc:mysql://YrfMM8eLqiGrdvR0:Puh88GTmNSnm5i6w@10.0.0.53:3306/cf_0b563be6_c1fd_4e14_bfb0_8ddd36178257
+#    url: jdbc:postgresql://baasu.db.elephantsql.com:5432/aemzthuy
+#    username: aemzthuy
+#    password: TpOjYzsaKaT112X70uJ6Tey8dyb73z7q
+#    driverClassName: org.postgresql.Driver
+#    tomcat:
+#      max-active: 2
+server:
+  port: 8090
+management:
+  security:
+    enabled: false
+security:
+  basic:
+    enabled: false

@@ -1,0 +1,82 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>infy.infy</groupId>
+  <artifactId>order-api-db-client</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>order-api-db-client</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.8.RELEASE</version>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>1.5.8.RELEASE</version>
+        </dependency>
+         <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-tomcat</artifactId>
+        <!--<scope>provided</scope>-->
+    </dependency>
+         <dependency>
+         	<groupId>io.pivotal.spring.cloud</groupId>
+         	<artifactId>
+         		spring-cloud-services-starter-service-registry
+         	</artifactId>
+         </dependency>
+         <dependency>
+         	<groupId>org.springframework.cloud</groupId>
+         	<artifactId>spring-cloud-starter-ribbon</artifactId>
+         </dependency>
+    </dependencies>
+
+   
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+		        <groupId>org.sonarsource.scanner.maven</groupId>
+       	 		<artifactId>sonar-maven-plugin</artifactId>
+        		<version>3.3.0.603</version>
+      		</plugin>
+        </plugins>
+    </build>
+
+    <dependencyManagement>
+    	<dependencies>
+    		<dependency>
+    			<groupId>io.pivotal.spring.cloud</groupId>
+    			<artifactId>
+    				spring-cloud-services-dependencies
+    			</artifactId>
+    			<version>1.5.0.RELEASE</version>
+    			<type>pom</type>
+    			<scope>import</scope>
+    		</dependency>
+    		<dependency>
+    			<groupId>org.springframework.cloud</groupId>
+    			<artifactId>spring-cloud-dependencies</artifactId>
+    			<version>Dalston.SR4</version>
+    			<type>pom</type>
+    			<scope>import</scope>
+    		</dependency>
+    	</dependencies>
+    </dependencyManagement>
+</project>
