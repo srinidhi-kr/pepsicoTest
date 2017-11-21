@@ -1,7 +1,7 @@
 ---
 applications:
 - name: order-api-db
-  instances: 1
+  instances: 2
   services:
   - service-registry
   - dev-mysql
