@@ -1,8 +1,8 @@
 ---
 applications:
 - name: order-api-db
-  instances: 2
+  instances: 1
   services:
   - service-registry
   - dev-mysql
- # buildpack: java_buildpack
+  buildpack: java_buildpack
